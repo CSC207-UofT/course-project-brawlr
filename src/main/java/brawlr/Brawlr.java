@@ -50,7 +50,16 @@ public class Brawlr {
         else if (response == "0"){
             ViewManager.displayCard(currentUserID);
         }
-
+        HashMap<String, String> testMap = new HashMap<>();
+        User u1 = new User("u1", testMap, testMap, "", "", "", true);
+        User u2 = new User("u2", testMap, testMap, "", "", "", true);
+        ChatManager ucm = u1.getuserCM();
+        ucm.createChat(u2);
+        Chat chat= ucm.conversations.get(u2);
+        chat.SendMessage(u1, u2, "Hello, I'm here.", true);
+        chat.SendMessage(u1, u2, "Hi, I'm here as well.", true);
+        ViewManager.displayChat(u1, u2);
+        ViewManager.displayChat(u2, u1);
         //calls brawlr.InputManager for swipes
         //calls LocationManager for nearest gym location
     }

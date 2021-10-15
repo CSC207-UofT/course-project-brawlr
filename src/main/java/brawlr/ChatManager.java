@@ -34,6 +34,8 @@ public class ChatManager {
     public void createChat(User chatUser2) {
         Chat newChat = new Chat(this.user1, chatUser2);
         this.conversations.put(chatUser2, newChat);
+        ChatManager other = chatUser2.getuserCM();
+        other.conversations.put(this.user1, newChat);
     }
 
     /**
