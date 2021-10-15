@@ -6,12 +6,12 @@ import javax.swing.text.View;
 import java.util.*;
 public class Brawlr {
 
+    /**
+     Starts app and displays using ViewManager based on log in or register
+     Scanner asks the user to log in, and overload main so you have two main methods.
+     * */
     public static void main(String[] args){
-        /*
-        Starts app and displays using ViewManager based on log in or register
-        Scanner asks the user to log in, and overload main so you have two main methods.
-        Based on swiperight and swipeleft command inputs, activate the UserManager's swiperight and swipeleft methods.
-        * */
+
 
 
         Scanner in = new Scanner(System.in);
@@ -59,7 +59,6 @@ public class Brawlr {
         chat.SendMessage(u1, u2, "Hi, I'm here as well.", true);
         ViewManager.displayChat(u1, u2);
         ViewManager.displayChat(u2, u1);
-        main
         //calls brawlr.InputManager for swipes
         //calls LocationManager for nearest gym location
     }
