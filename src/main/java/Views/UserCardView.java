@@ -1,15 +1,20 @@
 package Views;
 
 public class UserCardView {
+    /**
+     * Displays the User Card, where the user can see other
+     * users' ProfileView displays
+     * */
     public static void displayCard(){
-        /*
-         * Displays the brawlr.User Card, where the user can see other
-         * users' ProfileView displays
-         * */
-        //calls Database Manager to retrieve users' profiles and displays
+
+        //Will be implemented using UI/UX design in Android Studio
 
     }
+    /**
+     * Displays the extended User Card, where the user can see other
+     * users' ProfileView displays with the controversial opinions, etc.
+     * */
     public static void displayExtendedCard(){
-        //wofewjuifwhe
+        //Will be implemented using UI/UX design in Android Studio
     }
 }
