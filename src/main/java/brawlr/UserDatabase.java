@@ -9,7 +9,7 @@ public class UserDatabase {
     private static Map<String, User> users = new HashMap<>();
 
     public static Map<String, User> getUnseenUsers(Map<String, User> seenUsers){
-        Map<String, User> unseenUsers = new HashMap<String, User>();
+        Map<String, User> unseenUsers = new HashMap<>();
         Set<String> keys = users.keySet();
         for (String key : keys){
             if (!seenUsers.containsKey(key)){

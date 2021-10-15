@@ -30,8 +30,8 @@ public class ChatView {
                 String msg = in.nextLine();
                 chat.SendMessage(currentUser, match, msg, true);
             }
-            for (int i = 0; i < log.size(); i++){
-                System.out.println(log.get(i));
+            for (String s : log) {
+                System.out.println(s);
             }
         }
     }

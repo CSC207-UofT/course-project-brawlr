@@ -1,8 +1,5 @@
 package brawlr;
 
-import brawlr.ViewManager;
-
-import javax.swing.text.View;
 import java.util.*;
 public class Brawlr {
 
@@ -59,7 +56,6 @@ public class Brawlr {
         chat.SendMessage(u1, u2, "Hi, I'm here as well.", true);
         ViewManager.displayChat(u1, u2);
         ViewManager.displayChat(u2, u1);
-        main
         //calls brawlr.InputManager for swipes
         //calls LocationManager for nearest gym location
     }

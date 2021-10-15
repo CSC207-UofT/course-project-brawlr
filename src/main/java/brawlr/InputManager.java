@@ -19,7 +19,7 @@ public class InputManager {
         System.out.println("Please enter your password:");
         String pass = in.nextLine();
 
-        HashMap<String, String> loginInfo = new HashMap<String, String>();
+        HashMap<String, String> loginInfo = new HashMap<>();
         loginInfo.put(userId, pass);
 
         System.out.println("Please attach any pictures for your profile:");
@@ -40,7 +40,7 @@ public class InputManager {
         System.out.println("Please enter your gender:");
         String gender = in.nextLine();
 
-        HashMap<String, String> personalStats = new HashMap<String, String>();
+        HashMap<String, String> personalStats = new HashMap<>();
         personalStats.put("height", height);
         personalStats.put("weight", weight);
         personalStats.put("gender", gender);

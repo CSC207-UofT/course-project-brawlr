@@ -10,6 +10,6 @@ public class UserCardView {
 
     }
     public static void displayExtendedCard(){
-        //wofewjuifwhe
+        //Display extended card.
     }
 }
