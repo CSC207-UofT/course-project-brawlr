@@ -3,7 +3,17 @@ import java.util.*;
 import brawlr.*;
 public class ChatView {
 
+    /**
+     * Checks if the user has an existing conversation with the match.
+     * If not, creates new chat. The chat between the currentUser and match
+     * is then displayed and printed out. The user is prompted to input a new
+     * message after every message if they indicate they want to keep
+     * messaging. The conversation log is updated and printed out every time.
+     * @param currentUser local user viewing the chat
+     * @param match Conversation partner user.
+     */
     public static void displayChat(User currentUser, User match) {
+
         ChatManager userCM = currentUser.getuserCM();
         if (!userCM.conversations.containsKey(match)){
             userCM.createChat(match);

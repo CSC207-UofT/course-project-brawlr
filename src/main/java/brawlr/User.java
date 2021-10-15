@@ -16,6 +16,17 @@ public class User {
     private boolean isLoggedIn;
     private ChatManager userCM;
 
+    /**
+     * Creates a User object based on the inputted information for the User
+     * attributes.
+     * @param id unique username created by new users
+     * @param loginInfo username and password stored in Hashmap
+     * @param personalStats user's inputted answers to weight, height, gender, etc.
+     * @param fightingStyle user's indicated preferred fighting/sparring style
+     * @param biography user's inputted biography
+     * @param controversialOpinions user's inputted controversial opinions
+     * @param isLoggedIn boolean regarding whether the client user is logged in or not
+     */
     public User(String id, HashMap<String, String> loginInfo, HashMap<String, String> personalStats,
                 String fightingStyle, String biography, String controversialOpinions, boolean isLoggedIn){
         this.id = id;
