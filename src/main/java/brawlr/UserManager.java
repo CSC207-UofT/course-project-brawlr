@@ -1,6 +1,29 @@
 package brawlr;
 
+import java.security.KeyStore;
+import java.util.HashMap;
+
 public class UserManager {
+
+
+    public static boolean login(String userId, String pass){
+        User user = UserDatabase.getUser(userId);
+        HashMap<String, String> userInfo = new HashMap<String, String>();
+        userInfo.put(userId, pass);
+        if (user.getLoginInfo().equals(userInfo)){
+            user.logIn();
+            return true;
+        }
+        else {
+            return false;
+        }
+    }
+
+    public static User getUser(String userId){
+        User user = UserDatabase.getUser(userId);
+        return user;
+    }
+
     /**
      * this method takes 2 users; user1 and user2. First it adds user2 to user1's seenUsers map.
      * The method then checks if user1's id is in user2's likes map If user1 is not in user2's
@@ -10,7 +33,6 @@ public class UserManager {
      * @param user1 A user object representing the user that did the right swipe
      * @param user2 A user object representing the user that received a right swipe
      */
-
 
     public static void addLike(User user1, User user2){
         user1.addSeenUser(user2);

@@ -20,7 +20,7 @@ public class UserDatabase {
      * Return the brawlr.User with a given ID.
      * @param ID the username of the user to get.
      */
-    public User getUser(String ID) {
+    public static User getUser(String ID) {
         return users.get(ID);
     }
 }

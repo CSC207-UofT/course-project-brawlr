@@ -18,12 +18,12 @@ public class ViewManager {
          * */
         ChatView.displayChat(user1, user2);
     }
-    public static void displayCard(){
+    public static void displayCard(String userID){
         /*
          * Calls the UserCardView class to display the brawlr.User Card, where the user can see other
          * users' ProfileView displays
          * */
-        UserCardView.displayCard();
+        InputManager.displayCard();
     }
     public static void displayCardExtended(){
         /*
@@ -31,12 +31,16 @@ public class ViewManager {
          * */
         UserCardView.displayExtendedCard();
     }
-    public static void displayLogin(){
+    public static String displayLogin(){
         /*
          * Calls the LoginView class to display the login screen, where the existing user is prompted to
          * input their login information
          * */
-        InputManager.sendLoginInput();
+        String loggedInID = InputManager.sendLoginInput();
+        if (loggedInID == null){
+            System.out.println("there was a problem loggin you in please try again");
+        }
+        return loggedInID;
     }
     public static void displayProfile(){
         /*
@@ -45,10 +49,10 @@ public class ViewManager {
          * */
         ProfileView.displayProfile();
     }
-    public static void displayUserCreation(){
+    public static String displayUserCreation(){
         /*
          * Calls the UserCreationView class to display the UserCreation screen for new Users
          * */
-        UserCreationView.displayUserCreation();
+        return InputManager.sendUserCreationInput();
     }
 }
