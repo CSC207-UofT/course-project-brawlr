@@ -3,8 +3,11 @@ package brawlr;
 import java.util.HashMap;
 import java.util.Scanner;
 public class InputManager {
-    //new user creation with User calls
-    //swipe functionality
+    /**
+     * Allows the new user to input answers to questionnaire so that their profile/User
+     * account can be created. Instantiates a User object using the information
+     * inputted.
+     */
     public static String sendUserCreationInput(){
         Scanner in = new Scanner(System.in);
 
@@ -46,7 +49,10 @@ public class InputManager {
         UserDatabase.add(newUser);
         return userId;
     }
-
+    /**
+     * Allows the existing user to log in with their username and password,
+     * and checks if the login info is inputted corrected
+     */
     public static String sendLoginInput(){
         Scanner in = new Scanner(System.in);
         System.out.println("Please enter your username:");
@@ -59,9 +65,5 @@ public class InputManager {
             return userId;
         }
         return null;
-    }
-
-    public static void displayCard(){
-
     }
 }
