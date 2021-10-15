@@ -11,9 +11,9 @@ public class ChatManager {
     /**
      * A data store of all the conversations held by this user (User1).
      */
-    public Map<User, Chat> conversations = new HashMap<>();
+    public static Map<User, Chat> conversations = new HashMap<>();
     /**
-     * The user who is the current client of this brawlr.ChatManager class.
+     * The user who is the current client of this brawlr. ChatManager class.
      */
     private User user1;
 
