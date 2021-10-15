@@ -19,7 +19,7 @@ class ChatTest {
     void tearDown() {
     }
 
-    @Test()
+    @org.junit.jupiter.api.Test
     public void testSendMessage() {
         HashMap<String, String> testMap = new HashMap<>();
         User u1 = new User("u1", testMap, testMap, "", "", "", true);

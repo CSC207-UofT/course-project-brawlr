@@ -60,4 +60,5 @@ public class Chat {
     public List<String> DisplayLog() {
         return history;
     }
+
 }

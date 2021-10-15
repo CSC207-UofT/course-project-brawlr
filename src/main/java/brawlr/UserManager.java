@@ -5,7 +5,12 @@ import java.util.HashMap;
 
 public class UserManager {
 
-
+    /**
+     * Checks if the inputted user info is correct and returns
+     * whether the login was successful or not.
+     * @param userId userId/username inputted by client user
+     * @param pass password inputted by client user
+     */
     public static boolean login(String userId, String pass){
         User user = UserDatabase.getUser(userId);
         HashMap<String, String> userInfo = new HashMap<String, String>();
@@ -19,6 +24,10 @@ public class UserManager {
         }
     }
 
+    /**
+     * Returns the user based on the userId inputted.
+     * @param userId the userId attribute of the User object
+     */
     public static User getUser(String userId){
         User user = UserDatabase.getUser(userId);
         return user;

@@ -2,13 +2,17 @@ package brawlr;
 
 import brawlr.ViewManager;
 
+import javax.swing.text.View;
 import java.util.*;
 public class Brawlr {
 
     public static void main(String[] args){
-        //Starts app and displays using ViewManager based on log in or register
-        //Scanner asks the user to log in, and overload main so you have two main methods.
-        //Based on swiperight and swipeleft command inputs, activate the UserManager's swiperight and swipeleft methods.
+        /*
+        Starts app and displays using ViewManager based on log in or register
+        Scanner asks the user to log in, and overload main so you have two main methods.
+        Based on swiperight and swipeleft command inputs, activate the UserManager's swiperight and swipeleft methods.
+        * */
+
 
         Scanner in = new Scanner(System.in);
         boolean loop = true;
@@ -44,10 +48,18 @@ public class Brawlr {
             System.out.println("works");
             ViewManager.displayCard(currentUserID);
         }
-        else if (Objects.equals(response1, "0")){
-            // add chat functionality
-        }
 
+        HashMap<String, String> testMap = new HashMap<>();
+        User u1 = new User("u1", testMap, testMap, "", "", "", true);
+        User u2 = new User("u2", testMap, testMap, "", "", "", true);
+        ChatManager ucm = u1.getuserCM();
+        ucm.createChat(u2);
+        Chat chat= ucm.conversations.get(u2);
+        chat.SendMessage(u1, u2, "Hello, I'm here.", true);
+        chat.SendMessage(u1, u2, "Hi, I'm here as well.", true);
+        ViewManager.displayChat(u1, u2);
+        ViewManager.displayChat(u2, u1);
+        main
         //calls brawlr.InputManager for swipes
         //calls LocationManager for nearest gym location
     }

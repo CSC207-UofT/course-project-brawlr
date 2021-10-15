@@ -7,6 +7,7 @@ public class UserCardView {
          * users' ProfileView displays
          * */
         //calls Database Manager to retrieve users' profiles and displays
+
     }
     public static void displayExtendedCard(){
         //wofewjuifwhe

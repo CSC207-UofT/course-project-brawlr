@@ -29,11 +29,15 @@ public class ChatManager {
     /**
      * Creates a new conversation between user1 and another user
      * chatUser2, and adds it to the database of conversations.
+     * Also adds the new conversation between user1 and the other user
+     * into the database of conversations for the other user
      * @param chatUser2 Conversation partner user.
      */
     public void createChat(User chatUser2) {
         Chat newChat = new Chat(this.user1, chatUser2);
         this.conversations.put(chatUser2, newChat);
+        ChatManager other = chatUser2.getuserCM();
+        other.conversations.put(this.user1, newChat);
     }
 
     /**
