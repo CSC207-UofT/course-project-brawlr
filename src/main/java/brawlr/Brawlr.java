@@ -13,7 +13,7 @@ public class Brawlr {
         Scanner in = new Scanner(System.in);
         boolean loop = true;
         int count = 0;
-        String currentUserID = new String();
+        String currentUserID = "";
         while (loop) {
             count += 1;
             System.out.println("Do you have an account with us? (Type 1 for yes, 0 for no)");
@@ -38,13 +38,14 @@ public class Brawlr {
             }
         }
         System.out.println("Would you like to start swiping (press 1) or would you prefer to " +
-                "chat with people you have mathed with (press 0)");
-        String response = in.nextLine();
-        if (response == "1"){
-//            add swipe functionality
-        }
-        else if (response == "0"){
+                "chat with people you have matched with (press 0)");
+        String response1 = in.nextLine();
+        if (Objects.equals(response1, "1")){
+            System.out.println("works");
             ViewManager.displayCard(currentUserID);
+        }
+        else if (Objects.equals(response1, "0")){
+            // add chat functionality
         }
 
         //calls brawlr.InputManager for swipes

@@ -45,6 +45,7 @@ public class InputManager {
         System.out.println("Please enter a controversial opinion:");
         String opinion = in.nextLine();
         User newUser = new User(userId, loginInfo, personalStats, fs, bio, opinion, true);
+        newUser.addSeenUser(newUser);
         UserDatabase.add(newUser);
         return userId;
     }
@@ -64,6 +65,7 @@ public class InputManager {
     }
 
     public static void displayCard(String userID){
+        System.out.println("input manager");
         Scanner in = new Scanner(System.in);
         User mainUser = UserDatabase.getUser(userID);
         Map<String, User> seenUsers = mainUser.getSeenUsers();
