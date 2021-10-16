@@ -17,11 +17,10 @@ public class ViewManager {
     /**
      * Calls the ChatView class to display the brawlr.Chat screen
      * */
-    public static void displayChat(User user1, User user2){
-        /* *
-         * Calls the ChatView class to display the brawlr.Chat screen
-         * */
-        ChatView.displayChat(user1, user2);
+    public static void displayChat(User user1){
+
+        ChatView.displayChat(user1);
+
     }
     /**
      * Calls the UserCardView class to display the brawlr.User Card, where the user can see other
