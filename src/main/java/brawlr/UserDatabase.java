@@ -8,6 +8,11 @@ public class UserDatabase {
     // ramy: should the users map be final if you're gonna be adding to it?
     private static Map<String, User> users = new HashMap<>();
 
+    /**
+     * Finds all the unseen users based on who the User has already seen.
+     * @param seenUsers the Map of seen User objects from the User object
+     * @return the Map of unseen User objects from the User object
+     */
     public static Map<String, User> getUnseenUsers(Map<String, User> seenUsers){
         Map<String, User> unseenUsers = new HashMap<>();
         Set<String> keys = users.keySet();

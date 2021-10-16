@@ -70,6 +70,14 @@ public class InputManager {
         return null;
     }
 
+    /**
+     * Displays all the user information from each of the unseen users that
+     * are found from the unseen users in the HashMap
+     * from the User object associated with the userID parameter.
+     * Does this in "rounds" after each swipe, which adds the user to seen
+     * and adds the user to Client user's likes if swiped right.
+     * @param userID inputted unique username/userID
+     */
     public static void displayCard(String userID){
         System.out.println("input manager");
         Scanner in = new Scanner(System.in);
