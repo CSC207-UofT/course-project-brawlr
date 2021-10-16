@@ -35,7 +35,7 @@ public class User {
         this.fightingStyle = fightingStyle;
         this.biography = biography;
         this.controversialOpinions = controversialOpinions;
-        this.seenUsers = new HashMap<String, User>();
+        this.seenUsers = new HashMap<>();
         this.likes = new ArrayList<>();
         this.matches = new ArrayList<>();
         this.isLoggedIn = false;
@@ -122,7 +122,7 @@ public class User {
     }
 
     /**
-     *akes a different instance of User, and to the likes of this instance of User
+     *Takes a different instance of User, and to the likes of this instance of User
      * @param user the user to add
      */
 
