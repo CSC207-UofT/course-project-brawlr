@@ -8,6 +8,7 @@ The user will open the app and be prompted to either log in or create a new acco
 
 ### Skeleton program
 For our UI, we have implemented a basic home page for the app in Android Studio (located in a separate repository which was shared with the TA). This demo screen demonstrates what our ideal final home screen will look like. Our skeleton program asks if the user has an existing account. If so, ViewManager will display login, which will take an inputted username and password and check if it matches in the system. If the user indicates that they are new, ViewManager will display UserCreation, and prompt the user to set username, password, and profile details. Next, it will ask if the user wants to swipe or look at chats. If they choose swipe, InputView will display unseen user cards. If the user selects chat, it will bring up a list of users that the user has chats with, and prompt them to choose a conversation or exit.
+We also left extra test code in Brawlr with example users to run the program.
 
 ### Team Members
 
