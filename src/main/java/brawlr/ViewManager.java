@@ -5,13 +5,10 @@ import Views.*;
  * Controller class that manages all the View classes
  * */
 public class ViewManager {
-    /* *
-     * Controller class that manages all the View classes
+    /**
+     * Calls the HomeView class to display the home screen via HomeView class
      * */
     public static void displayHome(){
-        /* *
-        * Calls the HomeView class to display the home screen via HomeView class
-        * */
         HomeView.displayHome();
     }
     /**
@@ -20,17 +17,13 @@ public class ViewManager {
     public static void displayChat(User user1){
 
         ChatView.displayChat(user1);
-
     }
     /**
      * Calls the UserCardView class to display the brawlr.User Card, where the user can see other
      * users' ProfileView displays
      * */
     public static void displayCard(String userID){
-        /* *
-         * Calls the UserCardView class to display the brawlr.User Card, where the user can see other
-         * users' ProfileView displays
-         * */
+
         System.out.println("card display");
         InputManager.displayCard(userID);
     }
@@ -38,9 +31,7 @@ public class ViewManager {
      * Calls the UserCardView class to display the extendedCard view of the UserCardView
      * */
     public static void displayCardExtended(){
-        /* *
-         * Calls the UserCardView class to display the extendedCard view of the UserCardView
-         * */
+
         UserCardView.displayExtendedCard();
     }
     /**
@@ -48,13 +39,10 @@ public class ViewManager {
      * input their login information
      * */
     public static String displayLogin(){
-        /* *
-         * Calls the LoginView class to display the login screen, where the existing user is prompted to
-         * input their login information
-         * */
+
         String loggedInID = InputManager.sendLoginInput();
         if (loggedInID == null){
-            System.out.println("there was a problem login you in please try again");
+            System.out.println("there was a problem loggin you in please try again");
         }
         return loggedInID;
     }
@@ -63,19 +51,14 @@ public class ViewManager {
      * (pictures, biography, personal stats (height, weight, etc.), and controversial opinions)
      * */
     public static void displayProfile(){
-        /* *
-         * Calls the ProfileView class to display the brawlr.User's profile with the personal information
-         * (pictures, biography, personal stats (height, weight, etc.), and controversial opinions)
-         * */
+
         ProfileView.displayProfile();
     }
     /**
      * Calls the UserCreationView class to display the UserCreation screen for new Users
      * */
     public static String displayUserCreation(){
-        /* *
-         * Calls the UserCreationView class to display the UserCreation screen for new Users
-         * */
+
         return InputManager.sendUserCreationInput();
     }
 }
