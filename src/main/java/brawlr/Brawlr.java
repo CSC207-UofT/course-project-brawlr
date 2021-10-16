@@ -1,8 +1,5 @@
 package brawlr;
 
-import brawlr.ViewManager;
-
-import javax.swing.text.View;
 import java.util.*;
 public class Brawlr {
 

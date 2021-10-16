@@ -15,7 +15,7 @@ public class ChatManager {
     /**
      * The user who is the current client of this brawlr.ChatManager class.
      */
-    private User user1;
+    private final User user1;
 
     /**
      * A constructor for brawlr.ChatManager class. Instantiates a new controller
