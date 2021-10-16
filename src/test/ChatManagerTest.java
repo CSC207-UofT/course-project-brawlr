@@ -20,18 +20,18 @@ public class ChatManagerTest {
     void tearDown() {
     }
 
-    @Test()
+    @org.junit.jupiter.api.Test
     public void testCreateChat() {
         HashMap<String, String> testMap = new HashMap<>();
         User u1 = new User("u1", testMap, testMap, "", "", "", true);
         User u2 = new User("u2", testMap, testMap, "", "", "", true);
         ChatManager cm1 = new ChatManager(u1);
         cm1.createChat(u2);
-        Chat newChat = new Chat(u1, u2);
-        assertEquals(cm1.conversations.get(u1), newChat);
+        User user2 = cm1.conversations.get(u2).User2;
+        assertEquals(user2, u2);
     }
 
-    @Test()
+    @org.junit.jupiter.api.Test
     public void testDeleteChat() {
         HashMap<String, String> testMap = new HashMap<>();
         User u1 = new User("u1", testMap, testMap, "", "", "", true);
