@@ -1,3 +1,6 @@
+import brawlr.Chat;
+import brawlr.ChatManager;
+import brawlr.User;
 import org.junit.Test;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;

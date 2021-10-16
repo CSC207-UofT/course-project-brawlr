@@ -1,3 +1,5 @@
+package brawlr;
+
 import java.util.HashMap;
 import java.util.Map;
 
@@ -11,12 +13,12 @@ public class ChatManager {
      */
     public Map<User, Chat> conversations = new HashMap<>();
     /**
-     * The user who is the current client of this ChatManager class.
+     * The user who is the current client of this brawlr.ChatManager class.
      */
-    private User user1;
+    private final User user1;
 
     /**
-     * A constructor for ChatManager class. Instantiates a new controller
+     * A constructor for brawlr.ChatManager class. Instantiates a new controller
      * for chatting for user1.
      * @param user1 Client user.
      */
@@ -27,11 +29,15 @@ public class ChatManager {
     /**
      * Creates a new conversation between user1 and another user
      * chatUser2, and adds it to the database of conversations.
+     * Also adds the new conversation between user1 and the other user
+     * into the database of conversations for the other user
      * @param chatUser2 Conversation partner user.
      */
     public void createChat(User chatUser2) {
         Chat newChat = new Chat(this.user1, chatUser2);
         this.conversations.put(chatUser2, newChat);
+        ChatManager other = chatUser2.getuserCM();
+        other.conversations.put(this.user1, newChat);
     }
 
     /**

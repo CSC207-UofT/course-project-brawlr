@@ -1,3 +1,5 @@
+package brawlr;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -58,4 +60,5 @@ public class Chat {
     public List<String> DisplayLog() {
         return history;
     }
+
 }
