@@ -22,6 +22,7 @@ public class ChatView {
             System.out.println(i + ": " + match.getId());
             i++;
         }
+
         int answer = in.nextInt();
         if (answer == 9999){
             //Does nothing, because this will help user exit/
@@ -44,6 +45,7 @@ public class ChatView {
                 for (int x = 0; x < log.size(); x++){
                     System.out.println(log.get(x));
                 }
+
             }
         }
     }

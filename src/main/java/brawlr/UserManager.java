@@ -1,6 +1,5 @@
 package brawlr;
 
-import java.security.KeyStore;
 import java.util.HashMap;
 
 public class UserManager {
@@ -13,7 +12,7 @@ public class UserManager {
      */
     public static boolean login(String userId, String pass){
         User user = UserDatabase.getUser(userId);
-        HashMap<String, String> userInfo = new HashMap<String, String>();
+        HashMap<String, String> userInfo = new HashMap<>();
         userInfo.put(userId, pass);
         if (user.getLoginInfo().equals(userInfo)){
             user.logIn();
@@ -29,8 +28,7 @@ public class UserManager {
      * @param userId the userId attribute of the User object
      */
     public static User getUser(String userId){
-        User user = UserDatabase.getUser(userId);
-        return user;
+        return UserDatabase.getUser(userId);
     }
 
     /**

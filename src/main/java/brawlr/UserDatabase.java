@@ -14,7 +14,7 @@ public class UserDatabase {
      * @return the Map of unseen User objects from the User object
      */
     public static Map<String, User> getUnseenUsers(Map<String, User> seenUsers){
-        Map<String, User> unseenUsers = new HashMap<String, User>();
+        Map<String, User> unseenUsers = new HashMap<>();
         Set<String> keys = users.keySet();
         for (String key : keys){
             if (!seenUsers.containsKey(key)){
