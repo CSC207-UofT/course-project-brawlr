@@ -15,6 +15,6 @@ public class UserCardView {
      * users' ProfileView displays with the controversial opinions, etc.
      * */
     public static void displayExtendedCard(){
-        //Will be implemented using UI/UX design in Android Studio
+        //Display extended card.
     }
 }
