@@ -44,11 +44,20 @@ public class Brawlr {
         System.out.println("Would you like to start swiping (press 1) or would you prefer to " +
                 "chat with people you have matched with (press 0)");
         String response1 = in.nextLine();
-        if (Objects.equals(response1, "1")){
+        if (response1.equals("1")){
             System.out.println("works");
             ViewManager.displayCard(currentUserID);
         }
+        else if (response1.equals("0")){
+            ViewManager.displayChat(UserManager.getUser(currentUserID));
+        }
+        else{
+            System.out.println("Invalid command.");
+        }
 
+        /**
+         * Testing code so that we can interact with the Chat with example users.
+         */
         HashMap<String, String> testMap = new HashMap<>();
         User u1 = new User("u1", testMap, testMap, "", "", "", true);
         User u2 = new User("u2", testMap, testMap, "", "", "", true);
@@ -57,9 +66,10 @@ public class Brawlr {
         Chat chat= ucm.conversations.get(u2);
         chat.SendMessage(u1, u2, "Hello, I'm here.", true);
         chat.SendMessage(u1, u2, "Hi, I'm here as well.", true);
-        ViewManager.displayChat(u1, u2);
-        ViewManager.displayChat(u2, u1);
+        ViewManager.displayChat(u1);
+        ViewManager.displayChat(u2);
         //calls brawlr.InputManager for swipes
         //calls LocationManager for nearest gym location
+
     }
 }
