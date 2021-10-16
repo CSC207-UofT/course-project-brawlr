@@ -30,7 +30,7 @@ class ChatTest {
         assertEquals(c1.DisplayLog().size(), 2);
     }
 
-    @Test()
+    @org.junit.jupiter.api.Test
     public void testDisplayLog() {
         HashMap<String, String> testMap = new HashMap<>();
         User u1 = new User("u1", testMap, testMap, "", "", "", true);
