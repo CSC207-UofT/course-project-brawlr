@@ -1,7 +1,7 @@
 ﻿# Project Report
-#### Specification
+### Specification
 Our app is a tinder-like app that lets you match with other people to spar. You can open the app and make an account (or log in) and start swiping on potential fighting partners. If both you swipe right on someone and they also swipe right on you it starts a chat between the two of you where you can organize where and when to meet to spar.
-#### CRC models
+### CRC models
 The classes in our crc model can be split into 4 sections: controller classes, entity classes, use case classes, and presenter cards. The main way that our app interacts is that it starts in the brawlr class, the brawlr class then interacts with the viewmanager to load the right views which then interacts with the inputmanager which takes care of user input. Depending on the input the Usermanager takes care to change our users and all of our users are passed through our database manager for interaction, only usernames are passed on to other manager classes, not user objects.
 ### Scenario walk-through
 The user will open the app and be prompted to either log in or create a new account. They will input their personal information before viewing a series of potential opponents, swiping right on those they wish to fight and left otherwise. After the user and a potential opponent have both indicated they wish to fight each other, a chat window will be set up in order to orchestrate the fight.
