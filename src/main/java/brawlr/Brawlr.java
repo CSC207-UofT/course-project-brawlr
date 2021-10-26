@@ -52,9 +52,10 @@ public class Brawlr {
             System.out.println("Invalid command.");
         }
 
-        /**
-         * Testing code so that we can interact with the Chat with example users.
-         */
+
+        //Testing code so that we can interact with the Chat with example users.
+
+        System.out.println("\nThis is the testing code with example users u1, u2.");
         HashMap<String, String> testMap = new HashMap<>();
         User u1 = new User("u1", testMap, testMap, "", "", "", true);
         User u2 = new User("u2", testMap, testMap, "", "", "", true);
@@ -63,7 +64,9 @@ public class Brawlr {
         Chat chat= ucm.conversations.get(u2);
         chat.SendMessage(u1, u2, "Hello, I'm here.", true);
         chat.SendMessage(u1, u2, "Hi, I'm here as well.", true);
+        System.out.println("You are user u1.");
         ViewManager.displayChat(u1);
+        System.out.println("You are now user u2.");
         ViewManager.displayChat(u2);
         //calls brawlr.InputManager for swipes
         //calls LocationManager for nearest gym location
