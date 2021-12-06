@@ -42,6 +42,7 @@ We used the Factory Design Pattern for the views/screens (particularly in the Fr
 
 #### Significant Changes:
 1. A significant pull request made by Zach can be found at: https://github.com/saleheza/brawlrUI/pull/5/files. This change was significant as it implemented the main screens of our application, which allowed the rest of the team to build off of for the implementation of the app's features.
+2. A significant pull request made by Anay can be found at https://github.com/saleheza/brawlrUI/pull/18/files. This was important as it set up the format for chat screens, which allowed the team to build the chat interface and display messages.
 
 
 
