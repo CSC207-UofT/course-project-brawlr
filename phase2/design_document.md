@@ -42,11 +42,11 @@ In our program, we packaged several features together to make our files more org
 We used the Factory Design Pattern for the views/screens
 
 #### Progress Report:
-1. Yixing and Josh have continued working on presentation/design document layout, chat functionality, fetching data from the realtime database, and debugging the chat implementation.
-2. Zach and Anay have continued to work on the UI, improving on the design and fixing bugs since phase 1.
+1. Yixing and Josh have completed working on presentation/design document layout, the chat functionality and architecture, and fetching data from the realtime database for Chat.
+2. Zach and Anay have completed the UI and app branding, improving on the design and fixing bugs since phase 1.
 3. Pierre has ____
-4. Ramy has ____
-5. Jaden have continued working on the matching system in the database, creating a profile screen that stores information in the database, and the UI for the matches screen.
+4. Ramy has reviewed code from Phase 1 to 2 and added documentation to improve code legibility; she also did heavy late-phase debugging to ensure the app runs all essential features without crashing (particularly for Chat).
+5. Jaden has completed the matching system in the database (including swipe functionality), creating a profile screen that stores information in the database, and the UI for the matches screen.
 
 
 #### Significant Changes:
@@ -56,5 +56,4 @@ We used the Factory Design Pattern for the views/screens
 4. A significant pull request made by Yixing can be found at ____
 3. A significant pull request made by Jaden can be found at https://github.com/saleheza/brawlrUI/pull/14. This change was significant as it helps debuging the add-on codes that were not working. 
 6. A significant pull request made by Jaden can be found at ____
-7. A significant pull request made by Ramy can be found at ____
-
+7. A significant pull request made by Ramy can be found at https://github.com/saleheza/brawlrUI/pull/27. This PR was a hefty update bringing in Yixing and Josh's initial Chat code and architecture, Yixing's packaging changes, as well as the extensive overall debugging + refactoring Anay and I did, my implementation of separate chat conversations (identifying each conversation with an ID in the database), and the UI tweaks I made to accomodate chat. This PR essentially brought in the functional chat feature into the app, which is a third of the app's functionality.
